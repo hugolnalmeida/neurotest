@@ -15,6 +15,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import suporte.Web;
 
 import java.util.concurrent.TimeUnit;
 
@@ -25,15 +26,9 @@ public class AmericanasTest {
 
     @Before
     public void setUp(){
-        //Abrir navegador
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Hugo leonardo\\drivers\\chromedriver83.exe");
-        navegador = new ChromeDriver();
 
-        //Navegar até a página
-        navegador.get("https://www.americanas.com.br/");
-
-        //Temporizador para visualizar melhor o teste
-        navegador.manage().timeouts().implicitlyWait (30, TimeUnit.SECONDS);
+        //Cria navegador e vai até o site escolhido
+        navegador = Web.createChrome();
     }
 
     //Método de teste utilizando arquivo .csv para inputs
