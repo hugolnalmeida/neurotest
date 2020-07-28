@@ -16,7 +16,7 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(DataDrivenTestRunner.class)
 @DataLoader(filePaths = "AmericanasTestData.csv")
-public class AmericanaspageObjectsTest {
+public class AmericanasPageObjectsTest {
 
     //Atributo de navegação
     private WebDriver navegador;
